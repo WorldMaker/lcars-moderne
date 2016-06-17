@@ -1,0 +1,23 @@
+{
+  "name": "lcars-moderne",
+  "version": "1.0.0",
+  "description": "Personal blog CSS theme",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass lcars-moderne.sass lcars-moderne.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WorldMaker/lcars-moderne.git"
+  },
+  "author": "Max Battcher <me@worldmaker.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WorldMaker/lcars-moderne/issues"
+  },
+  "homepage": "https://github.com/WorldMaker/lcars-moderne#readme",
+  "dependencies": {
+    "bulma": "0.0.28"
+  }
+}
