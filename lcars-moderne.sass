@@ -75,3 +75,65 @@ $size-huge: $size-1
 
 @import './pygments.scss'
 @import './node_modules/bulma/bulma.sass'
+
+// Code, pre
+code, pre
+  //  padding: 1em;
+  margin-bottom: 1em
+  border-top: 1px $chameleon0 solid
+  border-left: 1px $chameleon2 solid
+  border-bottom: 1px $chameleon0 solid
+  border-right: 1px $chameleon2 solid
+  overflow-x: auto
+  overflow-y: hidden
+  border-radius: 5px
+
+// Typogrify
+body
+  font-variant-ligatures: additional-ligatures
+  font-variant-numeric: oldstyle-nums
+
+.caps
+  text-transform: lowercase
+  font-variant: small-caps
+  //font-variant-caps: titling-caps
+
+.content p, .content blockquote
+  text-align: justify
+
+// Headers
+
+h1
+  font-family: $family-sans-serif
+  color: $scarletRed0
+  font-weight: 200
+
+  &.post-title
+    font-weight: 100
+    text-align: center
+    font-variant-caps: titling-caps
+
+h2
+  font-family: $family-sans-serif
+  color: $orange0
+  font-weight: 300
+
+h3
+  font-family: $family-sans-serif
+  color: $orange0
+  font-weight: 600
+
+h4
+  font-family: $family-sans-serif
+  color: $butter0
+  font-weight: 700
+
+h5
+  font-family: $family-sans-serif
+  color: $butter1
+  font-weight: 800
+
+h6
+  font-family: $family-sans-serif
+  color: $butter2
+  font-weight: 900
