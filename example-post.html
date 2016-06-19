@@ -19,45 +19,18 @@
 
   <body>
 
-    <header class="site-header">
-      <div id="hd">
-        <!--<img src="images/wmgear_trans.png" alt="WorldMaker.net Gear Logo" align="right" />-->
-        <a href="/"><img src="http://cdn.worldmaker.net/images/wmr-blog.png" alt="WorldMaker" id="logo" /></a>
+  <div id="shell">
 
-        <ul id="nav" class="list-unstyled">
-          <li><a href="http://www.worldmaker.net/" title="WorldMaker.net">Home</a></li>
-          <li><a href="http://github.com/WorldMaker/" title="My Code Site">Code</a></li>
-          <li><a href="http://blog.worldmaker.net/" title="My Blog" id="current"><img src="http://media.worldmaker.net/images/wmgear010-trans.png" alt="WorldMaker.net Gear Logo" id="gear" alt="gear" /> Blog</a></li>
-        </ul>
+    <header class="site-header" id="hd">
+        <div id="hd-tlc">&nbsp;</div>
+        <a href="/"><img src="http://media.worldmaker.net/images/wmgear010-trans.png" alt="WorldMaker.net Gear Logo" id="gear" alt="gear" /></a>
+        <h1 id="hd-pt" class="post-title h1">The Crestwood Stage</h1>        
+        <div id="hd-fill">&nbsp;</div>
+    </header>
 
-        <br clear="both" />
-      </div>	<!-- end of hd -->
-
-
-  </div>
-
-</header>
-
-
-    <div id="page-content" class="container page-content xd">
-        
-
-<div class="post row">
-
-  <header class="post-header content">
-    <h1 class="post-title h1">The Crestwood Stage</h1>
-    <p class="post-meta text-info text-center">Jun 6, 2016
-      
-      
-      
-      
-       &bull; Part 1 of 1 in <a href="/work/crestwood-stage/">The Crestwood Stage</a>
-      
-
-      </p>
-  </header>
-
-  <article class="content post-content col-md-8 col-md-offset-2">
+<div id="page-content">
+  <div id="co">
+  <article id="co-main" class="content">
     <p>Jane grumbled unhappily awake at the notification ping from her tablet,
 realizing it meant some algorithm wanted her stagecoach in motion asap.
 “Dumb algorithms, all you care about is the horses, where’s my beauty
@@ -375,7 +348,23 @@ shower was waiting for her and food soon after that.</p>
 <p>Jane shrugged and gently grinned, feeling that said enough for the day.</p>
 
   </article>
-</div>
+  </div>
+
+<aside id="nav-bar">
+    <p class="post-meta text-info text-center">Jun 6, 2016
+      
+      
+      
+      
+       &bull; Part 1 of 1 in <a href="/work/crestwood-stage/">The Crestwood Stage</a>
+      
+
+      </p>
+        <ul id="nav" class="list-unstyled">
+          <li><a href="http://www.worldmaker.net/" title="WorldMaker.net">Home</a></li>
+          <li><a href="http://github.com/WorldMaker/" title="My Code Site">Code</a></li>
+          <li><a href="http://blog.worldmaker.net/" title="My Blog" id="current"> Blog</a></li>
+        </ul>
 
 <div class="row">
   
@@ -414,13 +403,9 @@ shower was waiting for her and food soon after that.</p>
   </ul>
 </div>
 
-<div class="row">
-<div class="xd">
-<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/worldmaker-blog/embed.js"></script><noscript><a href="http://worldmaker-blog.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-</div>
+</aside>
 
-    </div>
+</div>
 
     <footer id="ft" class="site-footer">
   <div class="container">
@@ -474,7 +459,7 @@ $(function() {
 });
 </script> 
 
-
+</div><!-- /#shell -->
 
   </body>
 

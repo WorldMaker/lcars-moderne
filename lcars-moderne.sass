@@ -161,3 +161,84 @@ dt
 dd
   //grid-column-start: 2 
   padding: 0.5rem
+
+// Outer shell
+body, html
+  width: 100vw
+  height: 100vh
+  max-height: 100vh
+  max-width: 100vw
+
+#shell
+  width: 100vw
+  height: 100vh
+  max-height: 100vh
+  max-width: 100vw
+  display: flex
+  flex-direction: column
+  padding: 1rem
+  overflow: hidden
+
+#hd
+  width: 100%
+  margin: 0
+  flex: 0
+  display: flex
+  flex-direction: row
+  align-items: center
+
+#hd-tlc
+  flex: 0 0 10rem
+  max-width: 10rem
+  height: 100%
+  border-radius: 5em/3em 0 0 0
+  background: $butter0
+
+#gear
+  flex: 0
+  max-height: 2rem
+  padding: 0 0.5rem
+
+#hd-pt
+  display: inline-block
+  color: $butter0
+  padding: 0 0.5rem
+
+#hd-fill
+  flex: 1 1 0.5rem
+  height: 100%
+  background: $butter0
+  border-radius: 0 5px 5px 0
+
+#page-content
+  flex: 1
+  max-height: 85vh
+  display: flex
+  flex-direction: row
+  margin: 0
+
+#nav-bar
+  flex: 0 0 10rem
+  order: 1
+  margin-top: -3px
+  padding: 0.65rem
+  background: $butter0
+
+#co
+  flex: 1
+  order: 2
+  width: 100%
+  border: 15px black solid
+  border-radius: 15px
+  margin-left: -15px
+
+#co-main
+  max-height: 100%
+  padding: 0.5rem
+  overflow-x: scroll
+  overflow-y: hidden
+  column-width: 30em
+  touch-action: pan-x
+
+#footer
+  flex: 0
