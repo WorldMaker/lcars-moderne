@@ -1,0 +1,27 @@
+// *** Admonitions ***
+
+// Admonitions are somewhat prevalent in the old reStructuredText files
+
+.admonition
+  @extend .notification
+  background: $grey-darker
+
+.admonition-title
+  font-family: $family-sans-serif
+  font-size: 1.25em
+  color: $text-strong
+  font-weight: 300
+  line-height: 1.125
+  margin-bottom: 20px
+
+.admonition.attention
+  @extend .notification.is-primary
+
+.admonition.caution, .admonition.warning, .admonition.important
+  @extend .notification.is-warning
+
+.admonition.danger, .admonition.error
+  @extend .notification.is-danger
+
+.admonition.hint, .admonition.note, .admonition.tip
+  @extend .notification.is-info
