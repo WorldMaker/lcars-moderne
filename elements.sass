@@ -75,17 +75,21 @@ h6
 dl
   break-before: column
   break-after: column
-  // *** Grid would be cool, but hardly supported right now. ***
-  //display: grid
-  //grid-template-columns: 1fr 3fr
-  //grid-template-rows: auto
+  display: grid
+  grid-template-columns: 1fr 3fr
+  grid-template-rows: auto
   padding: 0.5em
   border-top: 0.5em map-get($lcars, accent2) solid
   border-bottom: 1em map-get($lcars, accent2) solid
   border-radius: 5px
 
+  +tablet
+    max-height: 50vh // display: grid won't break across columns
+    overflow-x: auto
+    overflow-y: auto
+
 dt
-  //grid-column-start: 1
+  grid-column-start: 1
   display: inline-block
   font-family: $family-sans-serif
   color: map-get($lcars, accent2)
@@ -95,5 +99,5 @@ dt
   padding: 0 0.5rem
 
 dd
-  //grid-column-start: 2 
+  grid-column-start: 2 
   padding: 0.5em
