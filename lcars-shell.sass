@@ -29,6 +29,11 @@ body
   flex-direction: row
   align-items: center
 
+  .fill
+    flex: 1 1 0.5em
+    align-self: stretch
+    background: var(--lcars-elbo)
+
 #hd::before
   content: ''
   flex: 0 0 1em
@@ -54,11 +59,20 @@ body
 
 #hd::after
   content: ''
-  flex: 1 1 0.5em
+  flex: 0 0 0.5em
   align-self: stretch
   //height: 100%
   background: var(--lcars-elbo)
   border-radius: 0 5px 5px 0
+
+#scrolldir
+  display: none
+  border-left: 2px black solid
+  border-right: 2px black solid
+
+  &.vis
+    +tablet
+      display: flex
 
 // *** Middle ***
 #co
@@ -68,13 +82,15 @@ body
   padding: 1em
 
   +tablet
-    columns: 20rem
-    gap: 2em
-    column-rule: 5px var(--lcars-offline-mute) dotted
     height: 100%
     //touch-action: pan-y
     overflow-x: auto
     overflow-y: auto
+
+    &.columnar
+      columns: 20rem
+      gap: 2em
+      column-rule: 5px var(--lcars-offline-mute) dotted
 
 #nav-bar
   grid-area: nav

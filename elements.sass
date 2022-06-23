@@ -17,7 +17,6 @@ pre
   break-before: column
   break-after: column
   break-inside: auto
-  max-height: 50vh // pre doesn't want to break across columns
   word-break: normal !important
   word-wrap: normal !important
   white-space: pre !important
@@ -27,6 +26,10 @@ pre
     top: 1em $chameleon0 solid
     bottom: 0.5em $chameleon0 solid
     radius: 5px
+
+.columnar pre
+  +tablet
+    max-height: 50vh // pre doesn't want to break across columns
 
 // *** Headers ***
 
@@ -84,6 +87,7 @@ dl
   border-bottom: 1em var(--lcars-accent2) solid
   border-radius: 5px
 
+.columnar dl
   +tablet
     display: block
 
