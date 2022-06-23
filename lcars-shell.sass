@@ -36,7 +36,7 @@ body
   border-radius: 5px 0 0 5px
   align-self: stretch
   //height: 100%
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
 
   +tablet
     flex: 0 0 10em
@@ -52,7 +52,7 @@ body
 
 #hd-pt
   display: inline-block
-  color: map-get($lcars, elbo)
+  color: var(--lcars-elbo)
   padding: 0 0.5em
 
 #hd::after
@@ -60,7 +60,7 @@ body
   flex: 1 1 0.5em
   align-self: stretch
   //height: 100%
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   border-radius: 0 5px 5px 0
 
 // *** Middle ***
@@ -76,7 +76,7 @@ body
   +tablet
     columns: 20rem
     gap: 2em
-    column-rule: 5px map-get($lcars, unavailable) dotted
+    column-rule: 5px var(--lcars-unavailable) dotted
     height: 100%
     //touch-action: pan-y
     overflow-x: auto
@@ -97,7 +97,7 @@ body
   content: ''
   flex: 0 0 1em
   height: 1em
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   border-bottom: 2px black solid
   border-radius: 5px 5px 0 0
 
@@ -108,7 +108,7 @@ body
   content: ''
   flex: 1 1 0.5em
   min-height: 0.5em
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   border-top: 2px black solid
   border-radius: 0 0 5px 5px
 
@@ -120,7 +120,7 @@ body
   display: flex
   flex-direction: column
   color: black
-  background: map-get($lcars, accent1)
+  background: var(--lcars-accent1)
   border-bottom: 2px black solid
   padding: 0.25em 0.5em
 
@@ -134,10 +134,10 @@ body
   order: 50
 
 .lxprimary
-  background: map-get($lcars, primary)
+  background: var(--lcars-primary)
 
 .lx2
-  background: map-get($lcars, accent2)
+  background: var(--lcars-accent2)
 
 #nav-bar .button
   display: block
@@ -166,7 +166,7 @@ body
   flex: 0 0 1em
   border-radius: 5px 5px 0 0
   border-bottom: 2px black solid
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
 
   +tablet
     flex: 1 1 10em
@@ -179,7 +179,7 @@ body
   content: ''
   flex: 0 0 0.5em
   align-self: stretch
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   border-radius: 0 0 5px 5px
 
   +tablet

@@ -1,6 +1,6 @@
 // hr
 hr
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   height: 1em
   border-radius: 0 0 5px 5px
   break-after: column
@@ -79,8 +79,8 @@ dl
   grid-template-columns: 1fr 3fr
   grid-template-rows: auto
   padding: 0.5em
-  border-top: 0.5em map-get($lcars, accent2) solid
-  border-bottom: 1em map-get($lcars, accent2) solid
+  border-top: 0.5em var(--lcars-accent2) solid
+  border-bottom: 1em var(--lcars-accent2) solid
   border-radius: 5px
 
   +tablet
@@ -90,9 +90,9 @@ dt
   grid-column-start: 1
   display: inline-block
   font-family: $family-sans-serif
-  color: map-get($lcars, accent2)
-  border-left: 1em map-get($lcars, accent2) solid
-  border-right: 0.5em map-get($lcars, accent2) solid
+  color: var(--lcars-accent2)
+  border-left: 1em var(--lcars-accent2) solid
+  border-right: 0.5em var(--lcars-accent2) solid
   border-radius: 5px 0 0 5px
   padding: 0 0.5rem
 
