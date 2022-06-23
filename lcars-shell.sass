@@ -4,22 +4,27 @@ html
     overflow: hidden
 
 body
-  display: flex
-  flex-direction: column
+  display: block
   padding: 1rem
 
   +tablet
+    display: grid
     width: 100vw
-    height: 100vh
+    height: 100vh  
+    min-height: 0
+    min-width: 0
     max-height: 100vh
     max-width: 100vw
     overflow: hidden
     touch-action: none
+    grid-template-columns: 10em 1fr
+    grid-template-rows: auto 1fr auto
+    grid-template-areas: 'hd hd' 'nav co' 'ft ft'
 
 // *** Header ***
 #hd
+  grid-area: hd
   margin: 0
-  flex: 0 0 auto
   display: flex
   flex-direction: row
   align-items: center
@@ -59,19 +64,8 @@ body
   border-radius: 0 5px 5px 0
 
 // *** Middle ***
-#page-content
-  flex: 1 1 auto
-  display: flex
-  flex-direction: column
-  margin: 0
-  overflow: hidden
-
-  +tablet
-    flex-direction: row
-
 #co
-  align-self: stretch
-  flex: 1 1 auto
+  grid-area: co
   border: 15px black solid
   border-radius: 15px
   margin-left: -15px
@@ -80,22 +74,17 @@ body
   padding: 1em
 
   +tablet
-    order: 2
-    columns: 25rem
+    columns: 20rem
+    height: 100%
     //touch-action: pan-y
     overflow-x: auto
     overflow-y: auto
 
 #nav-bar
-  flex: 0 0 auto
+  grid-area: nav
   display: flex
   flex-direction: column
-  align-self: stretch
   //padding: 0.65rem
-
-  +tablet
-    flex: 0 0 10em
-    order: 1
 
 #nav-bar-interior
   +tablet
@@ -158,8 +147,8 @@ body
 
 // *** Footer ***
 #ft
+  grid-area: ft
   margin-top: 0.5em
-  flex: 0 0 auto
   display: flex
   flex-direction: column
   align-items: center
