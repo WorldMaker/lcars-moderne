@@ -10,6 +10,7 @@ async function build() {
         outfile: 'dist/lcars-moderne.css',
         plugins: [sassPlugin()],
         loader: {
+            ".png": "dataurl",
             ".woff": "copy",
             ".woff2": "copy"
         }
