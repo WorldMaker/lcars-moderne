@@ -14,6 +14,14 @@ async function build() {
             ".woff2": "copy"
         }
     })
+
+    await esbuild.build({
+        entryPoints: ['lcars-shell.js'],
+        bundle: true,
+        sourcemap: true,
+        minify: true,
+        outfile: 'dist/index.js'
+    })
 }
 
 build().catch(() => process.exit(1))

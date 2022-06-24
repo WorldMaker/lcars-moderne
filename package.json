@@ -1,8 +1,9 @@
 {
   "name": "lcars-moderne",
   "version": "2.0.0",
+  "type": "module",
   "description": "Personal blog CSS theme",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "node build.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,6 +25,7 @@
     "bulma": "^0.8.2",
     "esbuild": "^0.14.47",
     "esbuild-plugin-sass": "^1.0.1",
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "typogr": "^0.6.8"
   }
 }
