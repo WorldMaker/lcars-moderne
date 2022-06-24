@@ -1,6 +1,6 @@
 // hr
 hr
-  background: map-get($lcars, elbo)
+  background: var(--lcars-elbo)
   height: 1em
   border-radius: 0 0 5px 5px
   break-after: column
@@ -17,7 +17,6 @@ pre
   break-before: column
   break-after: column
   break-inside: auto
-  max-height: 50vh // pre doesn't want to break across columns
   word-break: normal !important
   word-wrap: normal !important
   white-space: pre !important
@@ -28,72 +27,80 @@ pre
     bottom: 0.5em $chameleon0 solid
     radius: 5px
 
+.columnar pre
+  +tablet
+    max-height: 50vh // pre doesn't want to break across columns
+
 // *** Headers ***
 
-h1
-  break-before: column
-  font-family: $family-sans-serif
-  color: $scarletRed0
-  font-weight: 200
+.content
+  h1
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-elbo)
+    font-weight: 200
 
-  &.post-title
-    font-weight: 100
-    text-align: center
-    font-variant-caps: titling-caps
+    &.post-title
+      font-weight: 100
+      text-align: center
+      font-variant-caps: titling-caps
 
-h2
-  break-before: column
-  font-family: $family-sans-serif
-  color: $orange0
-  font-weight: 300
+  h2
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-primary)
+    font-weight: 300
 
-h3
-  break-before: column
-  font-family: $family-sans-serif
-  color: $orange0
-  font-weight: 600
+  h3
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-accent1)
+    font-weight: 600
 
-h4
-  break-before: column
-  font-family: $family-sans-serif
-  color: $butter0
-  font-weight: 700
+  h4
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-accent2)
+    font-weight: 700
 
-h5
-  break-before: column
-  font-family: $family-sans-serif
-  color: $butter1
-  font-weight: 800
+  h5
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-elbo)
+    font-weight: 800
 
-h6
-  break-before: column
-  font-family: $family-sans-serif
-  color: $butter2
-  font-weight: 900
+  h6
+    break-before: column
+    font-family: $family-sans-serif
+    color: var(--lcars-primary)
+    font-weight: 900
 
 // dl
 dl
   break-before: column
   break-after: column
-  // *** Grid would be cool, but hardly supported right now. ***
-  //display: grid
-  //grid-template-columns: 1fr 3fr
-  //grid-template-rows: auto
+  display: grid
+  grid-template-columns: 1fr 3fr
+  grid-template-rows: auto
   padding: 0.5em
-  border-top: 0.5em map-get($lcars, accent2) solid
-  border-bottom: 1em map-get($lcars, accent2) solid
+  border-top: 0.5em var(--lcars-accent2) solid
+  border-bottom: 1em var(--lcars-accent2) solid
   border-radius: 5px
 
+.columnar dl
+  +tablet
+    display: block
+
 dt
-  //grid-column-start: 1
+  grid-column-start: 1
   display: inline-block
   font-family: $family-sans-serif
-  color: map-get($lcars, accent2)
-  border-left: 1em map-get($lcars, accent2) solid
-  border-right: 0.5em map-get($lcars, accent2) solid
+  color: var(--lcars-accent2)
+  border-left: 1em var(--lcars-accent2) solid
+  border-right: 0.5em var(--lcars-accent2) solid
   border-radius: 5px 0 0 5px
   padding: 0 0.5rem
 
 dd
-  //grid-column-start: 2 
+  grid-column-start: 2 
   padding: 0.5em
