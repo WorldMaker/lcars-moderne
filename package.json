@@ -1,10 +1,10 @@
 {
   "name": "lcars-moderne",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Personal blog CSS theme",
   "main": "index.js",
   "scripts": {
-    "build": "sass lcars-moderne.sass lcars-moderne.css",
+    "build": "node build.cjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +17,13 @@
     "url": "https://github.com/WorldMaker/lcars-moderne/issues"
   },
   "homepage": "https://github.com/WorldMaker/lcars-moderne#readme",
-  "dependencies": {
+  "devDependencies": {
+    "@fontsource/cormorant-garamond": "^4.5.7",
+    "@fontsource/exo-2": "^4.5.8",
+    "@fontsource/fira-mono": "^4.5.8",
     "bulma": "^0.8.2",
+    "esbuild": "^0.14.47",
+    "esbuild-plugin-sass": "^1.0.1",
     "sass": "^1.52.3"
   }
 }
