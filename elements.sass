@@ -6,12 +6,11 @@ hr
   break-after: column
 
 // Code, pre
-code
-  border-top: 1px $chameleon0 solid
-  border-left: 1px $chameleon2 solid
-  border-bottom: 1px $chameleon0 solid
-  border-right: 1px $chameleon2 solid
+code:not(.highlight code)
+  border-left: 0.5em $chameleon0 solid
+  border-right: 0.25em $chameleon0 solid
   border-radius: 5px
+  background: $aluminium5
 
 pre
   break-before: column
