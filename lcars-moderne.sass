@@ -1,50 +1,76 @@
 @charset "utf-8"
 
-// *** Fonts ***
-@import 'node_modules/@fontsource/exo-2/100.css'
-@import 'node_modules/@fontsource/exo-2/100-italic.css'    
-@import 'node_modules/@fontsource/exo-2/200.css'
-@import 'node_modules/@fontsource/exo-2/200-italic.css'  
-@import 'node_modules/@fontsource/exo-2/300.css'
-@import 'node_modules/@fontsource/exo-2/300-italic.css'
-@import 'node_modules/@fontsource/exo-2/400.css'
-@import 'node_modules/@fontsource/exo-2/400-italic.css'
-@import 'node_modules/@fontsource/exo-2/500.css'
-@import 'node_modules/@fontsource/exo-2/500-italic.css'
-@import 'node_modules/@fontsource/exo-2/600.css'
-@import 'node_modules/@fontsource/exo-2/600-italic.css'
-@import 'node_modules/@fontsource/exo-2/700.css'
-@import 'node_modules/@fontsource/exo-2/700-italic.css'
-@import 'node_modules/@fontsource/exo-2/800.css'
-@import 'node_modules/@fontsource/exo-2/800-italic.css'
-@import 'node_modules/@fontsource/exo-2/900.css'
-@import 'node_modules/@fontsource/exo-2/900-italic.css'
-@import 'node_modules/@fontsource/cormorant-garamond/400.css'
-@import 'node_modules/@fontsource/cormorant-garamond/400-italic.css'
-@import 'node_modules/@fontsource/cormorant-garamond/700.css'
-@import 'node_modules/@fontsource/cormorant-garamond/700-italic.css'
-@import 'node_modules/@fontsource/fira-mono/400.css'
-@import 'node_modules/@fontsource/fira-mono/700.css'
+@use "./typography.sass" as *
+@forward "./typography.sass"
 
 // *** Palettes ***
-@import './lcars-palette.sass'
-@import './tango.sass'
+@use './lcars-palette.sass' as *
+@use './tango.sass' as *
 
 // *** Pygments highlight styles (tango) ***
-@import './pygments.scss'
-
-// *** Bulma (vars) ***
-@import './bulma-vars.sass'
+@forward './pygments.scss'
 
 // *** Bulma (base library) ***
-@import "node_modules/bulma/sass/utilities/_index"
-@import "node_modules/bulma/sass/utilities/mixins.scss"
-@import "node_modules/bulma/sass/base/_index"
-@import "node_modules/bulma/sass/elements/_index"
-@import "node_modules/bulma/sass/components/_index"
+@forward "node_modules/bulma/sass/utilities" with (
+    // *** Setup Bulma Variable Overrides ***
+
+    // *** Color overides ***
+    $black: black,
+    $grey-darker: $aluminium5,
+    $grey-dark: $aluminium4,
+    $grey: $aluminium3,
+    $grey-light: $aluminium2,
+    $grey-lighter: $aluminium1,
+    $white: $aluminium0,
+
+    $blue: var(--lcars-accent1), // $skyBlue0
+    $green: $chameleon0,
+    $orange: $orange0,
+    $purple: $plum0,
+    $red: $scarletRed0,
+    $turquoise: var(--lcars-primary), // $skyBlue0
+    $cyan: var(--lcars-accent1), // $skyBlue0
+    $yellow: $butter0,
+
+    // *** Typography ***
+    $family-sans-serif: $sans,
+    $family-monospace: $monospace,
+    // $family-serif: $serif, // no longer a variable
+
+    // *** Miscellaneous ***
+    $radius: 0,
+
+    // *** Color Usage ***
+    $text: white,
+    // $body-background: #000, // no longer a variable
+    // $background: #000,
+    // $text-light: $aluminium5,
+    // $text-strong: $aluminium2,
+    // $link: $skyBlue0,
+    // $link-hover: $skyBlue1,
+    // $link-hover-background: $skyBlue2,
+    // $link-active: $skyBlue2,
+    // $link-active-background: $skyBlue2,
+
+    // $code: white,
+    // $code-background: black,
+    // $pre: white,
+    // $pre-background: black,
+
+    // *** Typography Usage ***
+    $family-primary: $serif,
+    // $body-size: 20px,
+    // $body-min-width: 0,
+
+    // $scheme-main: black,
+    // $scheme-invert: $aluminium0,
+)
+@forward "node_modules/bulma/sass/base"
+@forward "node_modules/bulma/sass/themes"
+@forward "node_modules/bulma/sass/elements"
+@forward "node_modules/bulma/sass/components"
 
 // *** My Stuff *** 
-@import './admonitions.sass'
-@import './elements.sass'
-@import './typogrify.sass'
-@import './lcars-shell.sass'
+@forward './admonitions.sass'
+@forward './elements.sass'
+@forward './lcars-shell.sass'
