@@ -59,13 +59,14 @@
 
     // *** Typography Usage ***
     $family-primary: $serif,
-    // $body-size: 20px,
     // $body-min-width: 0,
 
     // $scheme-main: black,
     // $scheme-invert: $aluminium0,
 )
-@forward "node_modules/bulma/sass/base"
+@forward "node_modules/bulma/sass/base" with (
+    $body-font-size: 20px,
+)
 @forward "node_modules/bulma/sass/themes"
 @forward "node_modules/bulma/sass/elements"
 @forward "node_modules/bulma/sass/components"
