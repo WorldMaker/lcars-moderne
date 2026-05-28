@@ -1,5 +1,5 @@
 import { build } from 'esbuild'
-import sassPlugin from 'esbuild-plugin-sass'
+import { sassPlugin } from 'esbuild-sass-plugin'
 
 
 await build({
