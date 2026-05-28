@@ -23,9 +23,9 @@
     "@fontsource/exo-2": "^5.2.8",
     "@fontsource/fira-mono": "^5.2.7",
     "bulma": "^0.8.2",
-    "esbuild": "^0.14.47",
+    "esbuild": "^0.28.0",
     "esbuild-plugin-sass": "^1.0.1",
-    "sass": "^1.52.3",
+    "sass": "^1.100.0",
     "typogr": "^0.6.8"
   }
 }
