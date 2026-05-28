@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/WorldMaker/lcars-moderne#readme",
   "devDependencies": {
-    "@fontsource/cormorant-garamond": "^4.5.7",
-    "@fontsource/exo-2": "^4.5.8",
-    "@fontsource/fira-mono": "^4.5.8",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/exo-2": "^5.2.8",
+    "@fontsource/fira-mono": "^5.2.7",
     "bulma": "^0.8.2",
     "esbuild": "^0.14.47",
     "esbuild-plugin-sass": "^1.0.1",
