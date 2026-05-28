@@ -1,15 +1,19 @@
+@use "tango" as *
+@use "typography" as *
+@use "node_modules/bulma/sass/elements/notification"
+  
 // *** Admonitions ***
 
 // Admonitions are somewhat prevalent in the old reStructuredText files
 
 .admonition
   @extend .notification
-  background: $grey-darker
+  background: $aluminium5
 
 .admonition-title
-  font-family: $family-sans-serif
+  font-family: $serif
   font-size: 1.25em
-  color: $text-strong
+  color: $aluminium2
   font-weight: 300
   line-height: 1.125
   margin-bottom: 20px

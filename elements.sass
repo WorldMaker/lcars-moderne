@@ -1,3 +1,7 @@
+@use "tango" as *
+@use "typography" as *
+@use "node_modules/bulma/sass/utilities/mixins" as *
+  
 // hr
 hr
   background: var(--lcars-elbo)
@@ -35,7 +39,7 @@ pre
 .content
   h1
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-elbo)
     font-weight: 200
 
@@ -46,31 +50,31 @@ pre
 
   h2
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-primary)
     font-weight: 300
 
   h3
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-accent1)
     font-weight: 600
 
   h4
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-accent2)
     font-weight: 700
 
   h5
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-elbo)
     font-weight: 800
 
   h6
     break-before: column
-    font-family: $family-sans-serif
+    font-family: $sans
     color: var(--lcars-primary)
     font-weight: 900
 
@@ -93,7 +97,7 @@ dl
 dt
   grid-column-start: 1
   display: inline-block
-  font-family: $family-sans-serif
+  font-family: $sans
   color: var(--lcars-accent2)
   border-left: 1em var(--lcars-accent2) solid
   border-right: 0.5em var(--lcars-accent2) solid

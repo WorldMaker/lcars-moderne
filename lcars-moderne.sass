@@ -1,28 +1,77 @@
 @charset "utf-8"
 
-// *** Fonts ***
-@import 'node_modules/@fontsource/exo-2/variable.css'
-@import 'node_modules/@fontsource/cormorant-garamond/index.css'
-@import 'node_modules/@fontsource/fira-mono/index.css'
+@use "./typography.sass" as *
+@forward "./typography.sass"
 
 // *** Palettes ***
-@import './lcars-palette.sass'
-@import './tango.sass'
+@use './lcars-palette.sass' as *
+@use './tango.sass' as *
 
 // *** Pygments highlight styles (tango) ***
-@import './pygments.scss'
-
-// *** Bulma (vars) ***
-@import './bulma-vars.sass'
+@forward './pygments.scss'
 
 // *** Bulma (base library) ***
-@import "node_modules/bulma/sass/utilities/_all"
-@import "node_modules/bulma/sass/base/_all"
-@import "node_modules/bulma/sass/elements/_all"
-@import "node_modules/bulma/sass/components/_all"
+@forward "node_modules/bulma/sass/utilities" with (
+    // *** Setup Bulma Variable Overrides ***
+
+    // *** Color overides ***
+    $black: black,
+    $grey-darker: $aluminium5,
+    $grey-dark: $aluminium4,
+    $grey: $aluminium3,
+    $grey-light: $aluminium2,
+    $grey-lighter: $aluminium1,
+    $white: $aluminium0,
+
+    $blue: $skyBlue2, // var(--lcars-accent1), // $skyBlue0
+    $green: $chameleon0,
+    $orange: $orange0,
+    $purple: $plum0,
+    $red: $scarletRed0,
+    $turquoise: $skyBlue1, // var(--lcars-primary), // $skyBlue0
+    $cyan: $skyBlue0, // var(--lcars-accent1), // $skyBlue0
+    $yellow: $butter0,
+
+    // *** Typography ***
+    $family-sans-serif: $sans,
+    $family-monospace: $monospace,
+    // $family-serif: $serif, // no longer a variable
+
+    // *** Miscellaneous ***
+    $radius: 0,
+
+    // *** Color Usage ***
+    // $text: white,
+    // $body-background: #000, // no longer a variable
+    // $background: #000,
+    // $text-light: $aluminium5,
+    // $text-strong: $aluminium2,
+    // $link: $skyBlue0,
+    // $link-hover: $skyBlue1,
+    // $link-hover-background: $skyBlue2,
+    // $link-active: $skyBlue2,
+    // $link-active-background: $skyBlue2,
+
+    // $code: white,
+    // $code-background: black,
+    // $pre: white,
+    // $pre-background: black,
+
+    // *** Typography Usage ***
+    $family-primary: $serif,
+    // $body-min-width: 0,
+
+    // $scheme-main: black,
+    // $scheme-invert: $aluminium0,
+)
+@forward "node_modules/bulma/sass/base" with (
+    $body-font-size: 20px,
+)
+@forward "node_modules/bulma/sass/themes"
+@forward "node_modules/bulma/sass/elements"
+@forward "node_modules/bulma/sass/components"
 
 // *** My Stuff *** 
-@import './admonitions.sass'
-@import './elements.sass'
-@import './typogrify.sass'
-@import './lcars-shell.sass'
+@forward './admonitions.sass'
+@forward './elements.sass'
+@forward './lcars-shell.sass'
