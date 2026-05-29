@@ -13,9 +13,11 @@ function initializeShell() {
   })
   const themeswitch = document.getElementById("themeswitch")
   if (themeswitch) {
-    const isLocalDark = localStorage.getItem('theme') === 'dark'
+    const localTheme = localStorage.getItem('theme')
+    const isLocalLight = localTheme === 'light'
+    const isLocalDark = localTheme === 'dark'
     const isPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    if (!isLocalDark && isPrefersDark) {
+    if (isLocalLight && isPrefersDark) {
       document.documentElement.classList.add('theme-light')
     } else if (isLocalDark) {
       document.documentElement.classList.add('theme-dark')
