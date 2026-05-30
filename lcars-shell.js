@@ -1,9 +1,4 @@
-import typogr from 'typogr'
-
 function initializeShell() {
-  document.querySelectorAll('.content').forEach(function (element) {
-    element.innerHTML = typogr.typogrify(element.innerHTML)
-  })
   const co = document.getElementById("co")
   co.addEventListener("wheel", (ev) => {
     if (co.scrollWidth > co.clientWidth) {
