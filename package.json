@@ -1,6 +1,6 @@
 {
   "name": "lcars-moderne",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "type": "module",
   "description": "Personal blog CSS theme",
   "main": "dist/index.js",
